@@ -66,7 +66,7 @@ class App extends Component {
     
     this.setState({imageUrl: this.state.input});
     
-    fetch('https://obscure-fortress-66765.herokuapp.com/imageUrl', {
+    fetch('http://13.250.116.199:3001/imageUrl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -76,7 +76,7 @@ class App extends Component {
     .then( response => response.json() )
     .then( response => {
         if(response) {
-          fetch('https://obscure-fortress-66765.herokuapp.com/image', {
+          fetch('http://13.250.116.199:3001/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
